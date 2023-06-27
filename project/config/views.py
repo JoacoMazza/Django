@@ -1,5 +1,7 @@
 from django.http import HttpResponse
 from django.template import Context, Template
+from datetime import datetime
+from django.shortcuts import render
 
 
 def saludo(request):
@@ -17,9 +19,14 @@ def probando_template(request):
 	mi_html = open("./templates/template1.html")
 	mi_template = Template(mi_html.read())
 	mi_html.close()
-	mi_contexto = Context()
+	nombre = "Juan"
+	apellido = "Perez"
+	datos = {"nombre": nombre, "apellido": apellido}
+	mi_contexto = Context(datos)
 	mi_documento = mi_template.render(mi_contexto)
 	return HttpResponse(mi_documento)
 
-def cambio(request):
-	pass
+def fechaHora(request):
+	ahora = datetime.now().strftime(r"%Y-%m-%d %H:%M")
+	return HttpResponse(ahora)
+
