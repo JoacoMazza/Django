@@ -20,3 +20,6 @@ def probando_template(request):
 	mi_contexto = Context()
 	mi_documento = mi_template.render(mi_contexto)
 	return HttpResponse(mi_documento)
+
+def cambio(request):
+	pass
