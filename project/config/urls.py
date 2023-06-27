@@ -27,4 +27,5 @@ urlpatterns = [
     path("probando_template/", views.probando_template),
     path("fechaHora/", views.fechaHora),
     path("misNotas/", views.misNotas),
+    path("burgas/", views.burgas),
 ]

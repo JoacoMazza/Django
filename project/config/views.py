@@ -34,3 +34,8 @@ def misNotas(request):
 	listaNotas = [2, 4, 6, 10 , 5, 7]
 	contexto = {"notas": listaNotas}
 	return render(request, "notas.html", contexto)
+
+def burgas(request):
+	listaBurgas = ["CheeseBurguer", "VeggieBurguer", "ChikenBurguer", "CandyBurguer"]
+	contexto = {"burgas": listaBurgas}
+	return render(request, "hamburguesas.html", contexto)
