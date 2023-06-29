@@ -19,5 +19,6 @@ from django.urls import path, include #include es para importar las urls de las 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('cliente/', include('apps.cliente.urls'))
+    path('cliente/', include('apps.cliente.urls')),
+    path("home/", include('apps.home.urls')),
 ]
