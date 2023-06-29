@@ -10,10 +10,18 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
+
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+#! sys.path es una lista de rutas donde python busca modulos para importar
+#! servirá para poder importar las aplicaciones de la carpeta apps
+import sys
+
+APPS_DIR = BASE_DIR / 'apps'
+sys.path.append(str(APPS_DIR))
 
 
 # Quick-start development settings - unsuitable for production
@@ -37,6 +45,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'apps.cliente',
+    'apps.home',
+    'apps.producto',
 ]
 
 MIDDLEWARE = [
@@ -103,7 +114,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es'
 
 TIME_ZONE = 'UTC'
 
