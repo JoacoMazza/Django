@@ -6,9 +6,9 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Bienvenido a mi proyecto de Django</h1>
-    {% for cliente in cientes %}
-        <h2>{{ cliente.nombre }} {{ cliente.apellido }} tiene {{ cliente.nacimiento }} años y vive en {{ cliente.pais_origen_id }}</h2>
+    <h1>Bienvenido a mi proyecto de Django6</h1>
+    {% for cliente in clientes %}
+        <p>{{ cliente.nombre }} {{ cliente.apellido }} nacio el {{ cliente.nacimiento }} años y vive en {{ cliente.pais_origen_id }}</p>
     {% endfor %}
 </body>
 </html>
