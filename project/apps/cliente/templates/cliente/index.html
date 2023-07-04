@@ -7,8 +7,15 @@
 </head>
 <body>
     <h1>Bienvenido a mi proyecto de Django6</h1>
+    <nav>
+        <a href="home/index.html">Home</a>
+        <a href="cliente/index.html">Clientes</a>
+        <a href="producto/html">Productos</a>
+    </nav>
+
     {% for cliente in clientes %}
         <p>{{ cliente.nombre }} {{ cliente.apellido }} nacio el {{ cliente.nacimiento }} años y vive en {{ cliente.pais_origen_id }}</p>
     {% endfor %}
+    
 </body>
 </html>
