@@ -30,3 +30,9 @@ def crear_cliente(request: HttpRequest) -> HttpResponse:
     else: #request.method == 'GET'
         form = ClienteForm()
     return render(request, 'cliente/crear.html', {'form': form})
+
+def busqueda(request: HttpRequest) -> HttpResponse:
+    cliente_nombre = Cliente.objects.filter(nombre__contains='dana')
+    contexto = {'clientes': cliente_nombre}
+    return render(request, '', contexto)
+
